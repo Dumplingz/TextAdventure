@@ -1,4 +1,4 @@
-package ca.dobervich.graph.HW5;
+package Game;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -10,7 +10,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-import ca.dobervich.graph.HW5.Level.Room;
+import Entities.Item;
+import Game.Level.Room;
 
 public class Level implements Serializable {
 	private HashMap<String, Room> nodes;

@@ -1,7 +1,10 @@
-package ca.dobervich.graph.HW5;
+package Entities;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import Game.Level;
+import Game.Level.Room;
 
 public class Player {
 	private Level.Room currentName;

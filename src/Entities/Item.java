@@ -1,4 +1,4 @@
-package ca.dobervich.graph.HW5;
+package Entities;
 
 public class Item {
 	private String name, description;

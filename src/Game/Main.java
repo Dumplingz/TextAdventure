@@ -1,6 +1,9 @@
-package ca.dobervich.graph.HW5;
+package Game;
 
 import java.util.Scanner;
+
+import Entities.Item;
+import Entities.Player;
 
 public class Main {
 
@@ -13,13 +16,13 @@ public class Main {
 
 		g.addOneWayDoor("hall", "dungeon");
 		g.addTwoWayDoor("hall", "closet");
-		
+
 		Item lobster = new Item("lobster", "a delicous friend");
 		Item orb = new Item("orb", "the powerful orb of Emmert");
 
 		g.getRoom("closet").addItem(lobster);
 		g.getRoom("closet").addItem(orb);
-		
+
 		// Level g = Level.loadLevel("carnival.graph");
 
 		Player player = new Player(g.getRoom("hall"), "Carlos", "the Bold");
@@ -48,7 +51,10 @@ public class Main {
 					System.out.println("You are entering " + name);
 				}
 			} else if (words[0].equals("take")) {
-				String name = words[1];
+				String name = "";
+				if (words.length >= 2) {
+					name = words[1];
+				}
 
 				Item item = player.getCurrentRoom().removeItem(name);
 				if (item == null) {
